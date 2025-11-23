@@ -1,0 +1,29 @@
+{
+  "name": "chatgpt-app-mcp",
+  "version": "1.0.0",
+  "description": "Minimal TypeScript ChatGPT App with MCP integration for Alpha Vantage stock data",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && npm run build:widget",
+    "build:widget": "node build-widget.js",
+    "dev": "tsx watch src/server.ts",
+    "start": "node dist/server.js",
+    "ngrok": "ngrok http 3000"
+  },
+  "keywords": ["mcp", "chatgpt", "typescript", "stocks", "alpha-vantage"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
